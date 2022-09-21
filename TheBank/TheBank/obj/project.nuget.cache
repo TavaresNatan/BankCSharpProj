@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "D78XXx98bZP+qbaDr/QK9QUbDGmveiSCtXtMgdYuF5lTzqWuvUIHcxH/pYELfdnIcX6D1w+UdDrV17O2NvuycA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\ForGitHub\\TheBank\\TheBank\\TheBank.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

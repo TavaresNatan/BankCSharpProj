@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.AssemblyInfo.cs
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\TheBank.exe
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\TheBank.deps.json
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\TheBank.runtimeconfig.json
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\TheBank.dll
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\TheBank.pdb
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.dll
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\refint\TheBank.dll
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.pdb
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.genruntimeconfig.cache
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\ref\TheBank.dll
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\ForGitHub\TheBank\TheBank\obj\Debug\net6.0\TheBank.csproj.CopyComplete
