@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using TheBank;
 
 #region Testing Area
 Console.ReadLine();
@@ -6,109 +7,25 @@ Console.ReadLine();
 
 //===============================================================================
 /*
+ How ids work?:
+        The id is just the index of the line of an account inside the .txt
+  
  To do:
--withdraw
--transfer
--getdata
+-getclientinfo
  */
-string account_path = "AccountIds.txt";
 
-Client CreateClient(string name, string password)
-{
-    string id = CreateID();
-    if (id != "Error")
-    {
-        Console.Clear();
-        var client = new Client(name, password);
-        client.AccountID = id;
-        Console.WriteLine($"Your id is: {id}");
-        SaveClient(client);
-        return client;
-    }
-    else
-    {
-        Console.WriteLine("A problem got out of control");
-        return null;
-    }
-
-    /// <summary>
-    /// Creates an id for a new account
-    /// </summary>
-    /// <returns></returns>
-    string CreateID()
-    {
-        string[] accounts = File.ReadAllLines(account_path);
-
-        int id = accounts.Length + 1;
-
-        if (id < 10)
-        {
-            return "000" + id;
-        }
-        else if (id < 100)
-        {
-            return "00" + id;
-        }
-        else if (id < 1000)
-        {
-            return "0" + id;
-        }
-        else if (id >= 1000 && id <= 9999)
-        {
-            return $"{id}";
-        }
-        else
-        {
-            return "Error";
-        }
-    }
-}
-
-Client LoadClient(string id)
-{
-    try
-    {
-        string[] accounts = File.ReadAllLines(account_path);
-
-        foreach (var account in accounts)
-        {
-            if (account.Contains(id))
-            {
-                return JsonConvert.DeserializeObject<Client>(account);
-            }
-        }
-        Console.WriteLine("Account not found.");
-        return null;
-    }
-    catch(Exception ex)
-    {
-        Console.WriteLine(ex);
-        return null;
-    }
-}
-
+var tools = new Tools();
+//Work more on
 void Deposit(string client_id, decimal money)
 {
-    var client = LoadClient(client_id);
+    var client = tools.LoadClient(client_id);
     if(money > 0)
     {
         client.Money += money;
     }
-}
-
-void SaveClient(Client client)
-{
-    try
+    else
     {
-        using (var writer = new StreamWriter(account_path))
-        {
-            writer.WriteLine(JsonConvert.SerializeObject(client));
-            Console.WriteLine("Account saved successfuly.");
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex);
+        throw new NotImplementedException();
     }
 }
 
@@ -139,7 +56,42 @@ class Client
     public string AccountID { get; set; }
     public string Password { get; set; }
 
-    
+    public void Transfer(string receiver_id, decimal money)
+    {
+        if(money >= Money)
+        {
+            //var client = tools.LoadClient(receiver_id);
+            #region This shouldnt be here
+            try
+            {
+                string[] accounts = File.ReadAllLines("AccountIds.txt");
 
-    
+                foreach (var account in accounts)
+                {
+                    if (receiver_id.Length == 4 && account.Contains(receiver_id))
+                    {
+                        var client = JsonConvert.DeserializeObject<Client>(account);
+                        client.Money += money;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException();
+            }
+            #endregion
+        }
+    }
+    //Work more on
+    public void WithDraw(decimal money)
+    {
+        if(money >= Money)
+        {
+            Money -= money;
+        }
+        else
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
